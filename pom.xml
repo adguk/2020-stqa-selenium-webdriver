@@ -12,6 +12,7 @@
         <module>homework01-task01</module>
         <module>homework01-task03</module>
         <module>homework02-task07</module>
+        <module>homework02-task08</module>
     </modules>
 
     <properties>
