@@ -36,7 +36,7 @@ public class Task08 {
     void every_product_on_main_page_should_have_sticker() {
         driver.navigate().to("http://localhost/litecart/en/");
         waitForPageLoad();
-        List<WebElement> elements = driver.findElements(By.cssSelector("li[class = 'product column shadow hover-light'] > a.link > div.image-wrapper"));
+        List<WebElement> elements = driver.findElements(By.cssSelector("li.product > a.link > div.image-wrapper"));
         assertThat(elements).isNotEmpty();
         for (WebElement element : elements) {
             List<WebElement> stickers = element.findElements(By.cssSelector("div[class ^= sticker]"));
