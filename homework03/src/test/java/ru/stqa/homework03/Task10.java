@@ -141,10 +141,12 @@ public class Task10 {
             rgbaNumbers = cssColor.replace("rgba(", "").replace(")", "").split(", ");
             assertThat(rgbaNumbers).isNotEmpty().hasSize(4);
         }
+        // Firefox
         else if (driver instanceof FirefoxDriver) {
             rgbaNumbers = cssColor.replace("rgb(", "").replace(")", "").split(", ");
             assertThat(rgbaNumbers).isNotEmpty().hasSize(3);
         }
+        // Not supported
         else
             throw new RuntimeException("Unsupported driver class");
         return rgbaNumbers;
