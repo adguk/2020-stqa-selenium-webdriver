@@ -14,12 +14,14 @@
         <module>homework02-task07</module>
         <module>homework02-task08</module>
         <module>homework03</module>
+        <module>homework04</module>
     </modules>
 
     <properties>
         <java.version>8</java.version>
         <lombok.version>1.18.12</lombok.version>
         <selenium.version>3.141.59</selenium.version>
+        <apache.commons.lang3.version>3.11</apache.commons.lang3.version>
         <junit.jupiter.api.version>5.6.2</junit.jupiter.api.version>
         <assertj.core.version>3.17.1</assertj.core.version>
         <mockito.junit.jupiter.version>3.5.7</mockito.junit.jupiter.version>
@@ -37,6 +39,11 @@
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
                 <version>${selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons.lang3.version}</version>
             </dependency>
 
 
