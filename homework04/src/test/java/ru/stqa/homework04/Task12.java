@@ -160,11 +160,6 @@ public class Task12 {
         assertThat(created.getAttribute("textContent")).isEqualTo(randomUUID);
     }
 
-    @Test
-    void mmmmm() {
-        System.out.println(UUID.randomUUID().toString());
-    }
-
     private void waitForPageLoad() {
         ExpectedCondition<Boolean> pageLoadCondition = new
                 ExpectedCondition<Boolean>() {
