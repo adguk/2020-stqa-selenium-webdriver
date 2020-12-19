@@ -19,6 +19,7 @@
         <module>homework06</module>
         <module>homework07</module>
         <module>homework08</module>
+        <module>homework09</module>
     </modules>
 
     <properties>
@@ -29,6 +30,7 @@
         <junit.jupiter.api.version>5.6.2</junit.jupiter.api.version>
         <assertj.core.version>3.17.1</assertj.core.version>
         <mockito.junit.jupiter.version>3.5.7</mockito.junit.jupiter.version>
+        <cucumber.version>6.9.1</cucumber.version>
     </properties>
 
     <dependencyManagement>
@@ -49,6 +51,11 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${apache.commons.lang3.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-java8</artifactId>
+                <version>${cucumber.version}</version>
+            </dependency>
 
 
             <!--Test dependencies-->
@@ -68,6 +75,12 @@
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-junit-jupiter</artifactId>
                 <version>${mockito.junit.jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-junit-platform-engine</artifactId>
+                <version>${cucumber.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
