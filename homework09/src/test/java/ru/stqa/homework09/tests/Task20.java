@@ -14,7 +14,13 @@ public class Task20 extends CucumberTestBase {
         When("we add first product from main page to cart {int} times", (Integer productsNumber) -> {
             app.addProductsToCart(3);
         });
-        And("we navigate to cart and delete all items from it", () -> {
+        Then("the cart has {int} products", (Integer productsNumber) -> {
+            assertThat(app.getNumberOfProductsInCart()).isEqualTo(productsNumber);
+        });
+        Given("the cart is not empty", () -> {
+            assertThat(app.getNumberOfProductsInCart()).isGreaterThan(0);
+        });
+        When("we navigate to cart and delete all items from it", () -> {
             app.removeAllProductsFromCart();
         });
         Then("the cart is empty", () -> {

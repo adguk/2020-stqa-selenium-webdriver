@@ -24,4 +24,8 @@ public class MainPage extends Page {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div#box-checkout-cart")));
         driver.findElement(By.cssSelector("div#box-checkout-cart")).click();
     }
+
+    public int getNumberOfProductsInCart() {
+        return Integer.parseInt(driver.findElement(By.cssSelector("div#cart span.quantity")).getAttribute("textContent"));
+    }
 }

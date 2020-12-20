@@ -25,11 +25,12 @@ public class Application {
     }
 
     public void addProductsToCart(int productsNumber) {
+        mainPage.open();
         for (int i = 0; i < productsNumber; i++) {
-            mainPage.open();
             mainPage.openProductPageOfFirstProductFromMostPopularSection();
             productPage.selectSizeIfPresent();
             productPage.addProductToCart(i);
+            mainPage.open();
         }
     }
 
@@ -40,5 +41,9 @@ public class Application {
 
     public boolean cartIsEmpty() {
         return checkoutPage.cartIsEmpty();
+    }
+
+    public int getNumberOfProductsInCart() {
+        return mainPage.getNumberOfProductsInCart();
     }
 }
